@@ -1,7 +1,7 @@
 const axios = require('axios');
 const keylight = require('./keylight');
 const config = require('./config');
-const url = `${config.host}${config.path}`;
+const url = `${config.urls[0].host}${config.urls[0].path}`;
 
 jest.mock('axios');
 
