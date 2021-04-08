@@ -1,13 +1,22 @@
 {
   "name": "elgato-key-light-automator",
   "version": "1.0.0",
-  "description": "",
+  "description": "Toggles Elgato Key Lights on and off. Works for Elgato Key Light Air as well.",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
   "author": "Jason Hee <hello@jasonhee.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonheecs/elgato-key-light-automator.git"
+  },
+  "keywords": ["elgato", "keylight", "light", "keylight air"],
+  "bugs": {
+    "url": "https://github.com/jasonheecs/elgato-key-light-automator/issues"
+  },
+  "homepage": "https://github.com/jasonheecs/elgato-key-light-automator#readme",
   "dependencies": {
     "axios": "^0.21.1"
   },

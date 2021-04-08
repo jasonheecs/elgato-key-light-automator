@@ -1,3 +1,3 @@
 const toggleKeyLight = require('./keylight');
 
-toggleKeyLight();
+exports.toggleKeyLight = toggleKeyLight();
