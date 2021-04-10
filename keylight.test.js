@@ -1,7 +1,10 @@
 const axios = require('axios');
 const keylight = require('./keylight');
-const config = require('./config');
-const url = `${config.urls[0].host}${config.urls[0].path}`;
+const keylightService = {
+  ip: '10.10.10.10',
+  port: 1234
+}
+const expectedUrl = `http://${keylightService.ip}:${keylightService.port}/elgato/lights`;
 
 jest.mock('axios');
 
@@ -19,8 +22,8 @@ describe('toggleKeyLight', () => {
     });
 
     it('turns the light on', async() => {
-      await keylight();
-      expect(axios.put).toHaveBeenCalledWith(url, {"Lights": [{"On": 1}]});
+      await keylight(keylightService);
+      expect(axios.put).toHaveBeenCalledWith(expectedUrl, {"Lights": [{"On": 1}]});
     });
   });
 
@@ -33,8 +36,8 @@ describe('toggleKeyLight', () => {
     });
 
     it('turns the light on', async() => {
-      await keylight();
-      expect(axios.put).toHaveBeenCalledWith(url, {"Lights": [{"On": 0}]});
+      await keylight(keylightService);
+      expect(axios.put).toHaveBeenCalledWith(expectedUrl, {"Lights": [{"On": 0}]});
     });
   });
 });

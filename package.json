@@ -12,13 +12,19 @@
     "type": "git",
     "url": "git+https://github.com/jasonheecs/elgato-key-light-automator.git"
   },
-  "keywords": ["elgato", "keylight", "light", "keylight air"],
+  "keywords": [
+    "elgato",
+    "keylight",
+    "light",
+    "keylight air"
+  ],
   "bugs": {
     "url": "https://github.com/jasonheecs/elgato-key-light-automator/issues"
   },
   "homepage": "https://github.com/jasonheecs/elgato-key-light-automator#readme",
   "dependencies": {
-    "axios": "^0.21.1"
+    "axios": "^0.21.1",
+    "bonjour": "^3.5.0"
   },
   "devDependencies": {
     "jest": "^26.6.3"
